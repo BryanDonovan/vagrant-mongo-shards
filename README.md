@@ -39,7 +39,7 @@ vagrant ssh shard01
 Connect to the MongoDB instances from your host:
 
 ```
-mongo --host configsrv.local --port 27019
+mongo --host configsrv.local --port 27017
 ```
 
 #### Add the shards 
