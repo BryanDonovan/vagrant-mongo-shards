@@ -2,12 +2,22 @@
 
 ## Purpose
 
-This is forked from [MUGBerlin/vagrant-machines](https://github.com/MUGBerlin/vagrant-machines).
+This is forked from [BryanDonovan/vagrant-mongo-shards](https://github.com/BryanDonovan/vagrant-mongo-shards).
 [Vagrant](http://vagrantup.com/) is a nice way to experiment with technologies without polluting your own machine with software.
 
 ## Preconditions
 
-Please follow the install instructions at http://vagrantup.com/.
+Please follow the install instructions at http://vagrantup.com/. In summary:
+
+1. Make sure the VT-x feature is enabled in the BIOS settings.
+2. Install Virtualbox (https://www.virtualbox.org/wiki/Downloads)
+3. Install Vagrant (http://downloads.vagrantup.com/)
+4. Clone this project
+5. Go to the project root directory
+6. Type:
+```
+vagrant up
+```
 
 ## What it Does
 
@@ -56,11 +66,6 @@ sh.addShard( "shard03.local:27017" )
 use config
 db.settings.save( { _id:"chunksize", value: 1 } )
 ```
-
-#### Problems
-
-- IP already used within your network
-  - open the vagrant fiel and change the ip of all nodes: xxx.vm.network :hostonly, "10.0.0.24" 
 
 #### Links
 
